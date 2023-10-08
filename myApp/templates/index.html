@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <style>
+        h1{
+            text-align: center;
+            justify-content: center;
+        }
+        .container {
+            padding-left: 30px;
+            padding-right: 30px;            
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body style="background-color:blanchedalmond; ">
+    <h1 style="background-color: aquamarine;padding-top:10px ;padding-bottom: 10px;">
+        Get The latest news on our website
+    </h1>
+    <div style="margin-left: 200px;">
+             <div class="container">
+        {% for new, des, i in mylist %}
+                <img src="{{ i }}" width="1000px" height="300px">
+                <h2>News:</h2> {{ new }}
+                {{ value|linebreaks }}
+    
+                <h2>Description:</h2>{{ des }}
+                {{ value|linebreaks }}
+    
+        {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
